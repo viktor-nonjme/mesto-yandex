@@ -1,0 +1,9 @@
+.popup__error {
+    font-size: 12px;
+    color: #FF0000;
+}
+
+.input__invalid {
+    margin: 0;
+    opacity: 1;
+}
