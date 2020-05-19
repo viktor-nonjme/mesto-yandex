@@ -148,8 +148,10 @@ function setEventListeners(popup) {
     });
 }
 
-function resetError(error) {
-    error.textContent = '';
+function resetError(errors) {
+    errors.forEach(error => {
+      error.textContent = ''
+    });
 }
 
 window.addEventListener('load', () => {
@@ -164,8 +166,7 @@ userInfoButton.addEventListener('click', event => {
 
 popupClose.addEventListener('click', event => {
   openClosePopup(event);
-  resetError(document.querySelector('.popup__error_name'));
-  resetError(document.querySelector('.popup__error_link'));
+  resetError(document.querySelectorAll('.popup__error'));
   popupForm.reset();
 }); 
 
@@ -182,8 +183,7 @@ popupForm.addEventListener('submit', event => {
 popupUserInfoClose.addEventListener('click', event => {
   openCloseUserPopup(event);
   popupUserInfoButton.removeAttribute('disabled', true);
-  resetError(document.querySelector('.popup__error_sign'));
-  resetError(document.querySelector('.popup__error_job'));
+  resetError(document.querySelectorAll('.popup__error'));
 });
 
 formInfo.addEventListener('submit', addUserInfo); 

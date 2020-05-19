@@ -36,9 +36,9 @@
         <img src="./images/close.svg" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new" id="form">
-            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" minlength="2" maxlength="30" required>
+            <input type="text" name="name" id="name" class="popup__input popup__input_type_name" placeholder="Название" minlength="2" maxlength="30" required>
             <div class="popup__error popup__error_name"></div>
-            <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" required>
+            <input type="url" name="link" id="job" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" required>
             <div class="popup__error popup__error_link"></div>
             <button type="submit" id="submit" class="button popup__button popup-new__button" disabled>+</button>
         </form>
@@ -68,9 +68,16 @@
 
   </div>
   <script src="./initialCards.js"></script>
-  <!--<script src="./Card.js"></script>
-  <script src="./CardList.js"></script>
-  <script src="./index.js"></script> -->
-  <script src="./old.js"></script>
+  <script src="modules/Root.js"></script>
+  <script src="./modules/Profile.js"></script>
+  <script src="./modules/Card.js"></script>
+  <script src="./modules/CardList.js"></script>
+  <script src="./modules/PopupPlace.js"></script>
+  <script src="./modules/PopupUser.js"></script>
+  <script src="./modules/PopupImage.js"></script>
+  <script src="./modules/UserInfo.js"></script>
+  <script src="./modules/FormValidator.js"></script>
+  <script src ="./modules/Error.js"></script>
+  <script src="./modules/index.js"></script>
 </body>
 </html>

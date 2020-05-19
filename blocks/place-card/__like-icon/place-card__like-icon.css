@@ -6,9 +6,11 @@
   height: 19px;
   cursor: pointer;
   transition: transform .3s linear;
+  outline: none;
 }
 
 .place-card__like-icon_liked {
+  outline: none;
   background-image: url(../../../images/like-active.svg);
 }
 
