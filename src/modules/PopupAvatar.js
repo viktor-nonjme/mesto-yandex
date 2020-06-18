@@ -1,4 +1,6 @@
-class PopupAvatar extends Popup {
+import Popup from './PopupPlace'
+
+export default class PopupAvatar extends Popup {
     constructor(popup, api, profile) {
         super(popup, api);
         this.profile = profile;

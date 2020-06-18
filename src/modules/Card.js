@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
     constructor(api, owner) {
         this.api = api;
         this.owner = owner;
@@ -23,7 +23,10 @@ class Card {
         placeCardImage.classList.add('place-card__image');
         placeCardImage.style.backgroundImage = `url(${link})`;
         placeCardDeleteIcon.classList.add('place-card__delete-icon');
+        placeCardDeleteIcon.setAttribute('src', './images/trash-icon.svg');
+        //placeCardDeleteIcon.src = `<%=require('./images/trash-icon.svg')%>`;
         placeCardDeleteIcon.style.display = displayDeleteIcon;
+        //placeCardDeleteIcon.style.backgroundImage = `<%=require('./images/trash-icon.svg')%>`;
         placeCardDescription.classList.add('place-card__description');
         placeCardName.classList.add('place-card__name');
         placeCardName.textContent = name;

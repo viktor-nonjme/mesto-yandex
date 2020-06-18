@@ -1,3 +1,20 @@
+import '../pages/index.css';
+
+import Api from './Api';
+import Card from './Card';
+import CardList from './CardList';
+import Error from './Error';
+import FormValidator from './FormValidator';
+import Owner from './Owner';
+import Popup from './PopupPlace';
+import PopupAvatar from './PopupAvatar';
+import PopupImage from './PopupImage';
+import PopupUser from './PopupUser';
+import Profile from './Profile';
+import Root from './Root';
+import Spinner from './Spinner';
+import UserInfo from './UserInfo';
+
 (()=> {
 //корень
 const root = document.querySelector('.root'); 
@@ -30,9 +47,11 @@ const ERROR_MESSAGES = {
     typeMismatch: 'Здесь должна быть ссылка'
 }
 
+const URL_ENV = process.env.NODE_ENV === "development" ? 'http://praktikum.tk/cohort8' : 'https://praktikum.tk/cohort8';
+
 //вызов функций
 const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort8',
+    baseUrl: URL_ENV,
     headers: {
       authorization: '4ae09ffa-715b-4c73-a26a-12d26e6bab8e',
       'Content-Type': 'application/json'
